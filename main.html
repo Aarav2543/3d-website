@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Website with A-Frame</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <style>
+      body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background-color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Lighting -->
+      <a-light type="ambient" color="#445451"></a-light>
+      <a-light type="directional" intensity="0.6" position="-1 1 0"></a-light>
+
+      <!-- Ground -->
+      <a-plane 
+        rotation="-90 0 0" 
+        width="50" 
+        height="50" 
+        color="#7BC8A4">
+      </a-plane>
+
+      <!-- 17 3D elements (boxes and spheres) -->
+      <a-box position="-3 1 -5" rotation="0 45 0" color="#4CC3D9" depth="0.5" height="1" width="1"></a-box>
+      <a-box position="2 0.5 -3" rotation="0 0 0" color="#EF2D5E" depth="1" height="1" width="1"></a-box>
+      <a-box position="1 1 -6" rotation="0 30 0" color="#FFC65D"></a-box>
+      <a-box position="-1 1 -7" rotation="0 60 0" color="#4CAF50"></a-box>
+      <a-box position="4 1 -8" rotation="0 90 0" color="#9C27B0"></a-box>
+      <a-box position="0 1 -9" rotation="0 30 0" color="#FF5722"></a-box>
+      <a-box position="3 1 -5" rotation="0 120 0" color="#CDDC39"></a-box>
+      <a-box position="-4 0.5 -6" rotation="0 45 0" color="#00BCD4"></a-box>
+      <a-box position="1.5 0.5 -4" rotation="0 60 0" color="#FFEB3B"></a-box>
+      <a-box position="-3.5 0.5 -5" rotation="0 15 0" color="#E91E63"></a-box>
+
+      <a-sphere position="0 2 -5" radius="0.75" color="#EF2D5E"></a-sphere>
+      <a-sphere position="3 1.5 -7" radius="0.5" color="#FFC65D"></a-sphere>
+      <a-sphere position="2 -0.5 -4" radius="1" color="#9C27B0"></a-sphere>
+      <a-sphere position="-1 1.5 -3" radius="0.5" color="#4CC3D9"></a-sphere>
+      <a-sphere position="1 0.5 -9" radius="0.75" color="#CDDC39"></a-sphere>
+      <a-sphere position="2.5 0.25 -2" radius="0.25" color="#FF5722"></a-sphere>
+      <a-sphere position="-3 1 -8" radius="0.5" color="#4CAF50"></a-sphere>
+
+      <!-- Camera -->
+      <a-camera position="0 1.6 0">
+        <a-cursor color="#FFFFFF"></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
